@@ -1,0 +1,642 @@
+//params
+:root {
+    --main-color: #000000;
+    --main-brand-color: #03B5A1;
+    --main-bg-color: #fff;
+    --main-bg-footer: #BBBBBB;
+}
+
+[data-theme="dark"] {
+    --main-color: #fff;
+    --main-brand-color: #03B5A1;
+    --main-bg-color: #000000;
+    --main-bg-footer: #000000;
+}
+
+//fonts
+@font-face {
+    font-family: 'Bunken Tech Sans Pro';
+    src: url('fonts/BunkenTechSansPro-Bold.eot');
+    src: local('Bunken Tech Sans Pro Bold'), local('fonts/BunkenTechSansPro-Bold'),
+        url('fonts/BunkenTechSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-Bold.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-Bold.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro Book';
+    src: url('fonts/BunkenTechSansPro-Book.eot');
+    src: local('Bunken Tech Sans Pro Book'), local('fonts/BunkenTechSansPro-Book'),
+        url('fonts/BunkenTechSansPro-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-Book.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-Book.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro';
+    src: url('fonts/BunkenTechSansPro-BoldIt.eot');
+    src: local('Bunken Tech Sans Pro Bold Italic'), local('fonts/BunkenTechSansPro-BoldIt'),
+        url('fonts/BunkenTechSansPro-BoldIt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-BoldIt.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-BoldIt.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-BoldIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro SeBd';
+    src: url('fonts/BunkenTechSansPro-SeBdIt.eot');
+    src: local('Bunken Tech Sans Pro SeBd Italic'), local('fonts/BunkenTechSansPro-SeBdIt'),
+        url('fonts/BunkenTechSansPro-SeBdIt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-SeBdIt.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-SeBdIt.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-SeBdIt.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro Book';
+    src: url('fonts/BunkenTechSansPro-BookIt.eot');
+    src: local('Bunken Tech Sans Pro Book Italic'), local('fonts/BunkenTechSansPro-BookIt'),
+        url('fonts/BunkenTechSansPro-BookIt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-BookIt.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-BookIt.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-BookIt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro ExBd';
+    src: url('fonts/BunkenTechSansPro-ExBdIt.eot');
+    src: local('Bunken Tech Sans Pro ExBd Italic'), local('fonts/BunkenTechSansPro-ExBdIt'),
+        url('fonts/BunkenTechSansPro-ExBdIt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-ExBdIt.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-ExBdIt.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-ExBdIt.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro Med';
+    src: url('fonts/BunkenTechSansPro-Med.eot');
+    src: local('Bunken Tech Sans Pro Med'), local('fonts/BunkenTechSansPro-Med'),
+        url('fonts/BunkenTechSansPro-Med.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-Med.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-Med.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-Med.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro Ligh';
+    src: url('fonts/BunkenTechSansPro-LightIt.eot');
+    src: local('Bunken Tech Sans Pro Light Italic'), local('fonts/BunkenTechSansPro-LightIt'),
+        url('fonts/BunkenTechSansPro-LightIt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-LightIt.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-LightIt.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-LightIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro ExBd';
+    src: url('fonts/BunkenTechSansPro-ExBd.eot');
+    src: local('Bunken Tech Sans Pro ExBd'), local('fonts/BunkenTechSansPro-ExBd'),
+        url('fonts/BunkenTechSansPro-ExBd.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-ExBd.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-ExBd.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-ExBd.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro SeBd';
+    src: url('fonts/BunkenTechSansPro-SeBd.eot');
+    src: local('Bunken Tech Sans Pro SeBd'), local('fonts/BunkenTechSansPro-SeBd'),
+        url('fonts/BunkenTechSansPro-SeBd.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-SeBd.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-SeBd.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-SeBd.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro Med';
+    src: url('fonts/BunkenTechSansPro-MedIt.eot');
+    src: local('Bunken Tech Sans Pro Med Italic'), local('fonts/BunkenTechSansPro-MedIt'),
+        url('fonts/BunkenTechSansPro-MedIt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-MedIt.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-MedIt.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-MedIt.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bunken Tech Sans Pro Ligh';
+    src: url('fonts/BunkenTechSansPro-Light.eot');
+    src: local('Bunken Tech Sans Pro Light'), local('fonts/BunkenTechSansPro-Light'),
+        url('fonts/BunkenTechSansPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BunkenTechSansPro-Light.woff2') format('woff2'),
+        url('fonts/BunkenTechSansPro-Light.woff') format('woff'),
+        url('fonts/BunkenTechSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//end fonts
+
+@mixin media-breakpoint-down($size) {
+    @if $size==md{
+        @media (max-width: 767px) { @content; }
+    }
+}
+
+@mixin media-breakpoint-up($size) {
+    @if $size==md{
+        @media (min-width: 768px) { @content; }
+    }
+}
+
+body{
+    background-color: var(--main-bg-color);
+    color:var(--main-color);
+    font-family: 'Bunken Tech Sans Pro';
+    font-size: 18px;
+    position: relative;
+}
+
+* { box-sizing: border-box;}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+:hover{
+    transition: all 0.4s ease-out;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+button {
+    outline: 0;
+}
+
+h1, h2, h3{
+    font-family: 'Bunken Tech Sans Pro';
+}
+
+p{
+    font-family: 'Bunken Tech Sans Pro';
+    color: var(--main-color);
+    font-size: 16px;
+}
+
+.header{
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    background: var(--main-bg-color);
+    &.liquid-alt{
+        border-bottom: 2px solid #DDDDDD;
+        opacity: 1;
+        
+        @include media-breakpoint-down(md){
+            height: 64px;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        align-items: center;
+        transition: all 0.4s ease-out;
+        position: relative;
+        @include media-breakpoint-down(md){
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            height: 75px;
+        }
+        @include media-breakpoint-up(md){
+            .liquid-alt &{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    &__leftside{
+        &-logo svg{
+            height: 72px;
+            width: auto;
+            transition: all 0.4s ease-out;
+            @include media-breakpoint-down(md){
+                height: 42px;
+            }
+            .liquid-alt &{
+                height: 50px;
+                margin-top: 0px;
+            }
+        }
+        @include media-breakpoint-down(md){
+            width: 100%;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            position: relative;
+            //box-shadow: 0px 0px 20px #3C413C;
+            z-index: 11;
+            transition: all 0.4s ease-out;
+
+            .liquid-alt &{
+                padding-bottom: 5px;
+                padding-top: 5px;
+                background-color: var(--main-bg-color);
+            }
+        }
+    }
+    &__menu{
+        display: none;
+        width: 20px;
+        height: 15px;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+        z-index: 12;
+        transition: all 0.4s ease-out;
+
+        .liquid-alt &{
+            top: 20px;
+            right: 80px;
+        }
+
+        span{
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: var(--main-color);
+            transition: all 0.4s ease-out;
+            &:nth-child(1){
+                top: 0;
+            }
+            &:nth-child(2){
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3){
+                bottom: 0;
+            }
+        }
+        &.active{
+            span{
+            background-color: var(--main-brand-color);
+                &:nth-child(1){
+                    top: 50%;
+                    transform: translateY(-50%)rotate(45deg);
+                }
+                &:nth-child(2){
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: none;
+                }
+                &:nth-child(3){
+                    top: 50%;
+                    transform: translateY(-50%)rotate(-45deg);
+                }
+            }
+        }
+        @include media-breakpoint-down(md){
+            display: block;
+        }
+    }
+    &__nav{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin: 0;
+
+        &-a{
+            padding: .5rem 1rem 0 1rem;
+        }
+
+        &-li{
+
+            &:hover{
+                &:before{
+                    width: 75px;
+                    transition: all 0.4s ease-out;
+                }
+            }
+            margin-left: 20px;
+            position: relative;
+            &:before{
+                position: absolute;
+                top: 2px;
+                left: 1rem;
+                opacity: 1;
+                width: 50px;
+                height: 4px;
+                content: "";
+                background-color: var(--main-brand-color);
+            }
+            a{
+                color: var(--main-color);
+                position: relative;
+                opacity: 1;
+                &.active{
+                    color: var(--main-brand-color);
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        @include media-breakpoint-down(md){
+            position: relative;
+            background-color: var(--main-bg-color);
+            width: 100%;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: block;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all linear .2s;
+            z-index: 10;
+            pointer-events: none;
+
+            &-li{
+                margin-left: 0px;
+                padding: 10px 0;
+                a{
+                    color: var(--main-color);
+                    &.active{
+                        color: #fff;
+                    }
+                }
+            }
+
+            &.active{
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: unset;
+                border-bottom: 1px solid var(--main-color);
+            }
+        }
+    }
+}
+
+.palisade{
+    height:100vh;
+    @include media-breakpoint-down(md){
+        height: 60vh;
+    }
+    &__container{
+        height: 100%;
+    }
+    &__row{
+        &--logo{
+            height: calc(100% - 160px);
+        }
+        &--menu{
+            height: 140px;
+        }
+        
+        @include media-breakpoint-down(md){
+            &--logo{
+                height: 100%;
+                padding: 0 20px;
+            }
+            &--menu{
+                display: none;
+            }
+        }
+    }
+    &__col{
+        position: relative;
+        &:before{
+            position: absolute;
+            top: -15px;
+            opacity: 1;
+            width: 50px;
+            height: 4px;
+            content: '';
+            background-color: var(--main-brand-color);
+        }
+        &:hover{
+            &:before{
+                width: 100px;
+                transition: all 0.4s ease-out;
+            }
+            p{
+                opacity: .7;
+            }
+            h3{
+                opacity: 1;
+            }
+        }
+        &-title{
+            font-weight: 800;
+            opacity: 0.5;
+            font-size: 24px;
+            z-index: 1;
+        }
+        &-descr{
+            font-weight: 300;
+            opacity: 0.5;
+            z-index: 1;
+        }
+    }
+    &__logo{
+        height: 70%;
+        &-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+    &__link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.info{
+    margin-top: 60px;
+    @include media-breakpoint-down(md){
+        margin-top: 20px;
+    }
+    &__step{
+        padding-bottom: 160px;
+        @include media-breakpoint-down(md){
+            padding-bottom: 80px;
+        }
+        &--1{
+            text-align: center;
+            &-title{
+                color: var(--main-brand-color);
+                margin: 0 auto;
+                margin-top: 60px;
+                @include media-breakpoint-down(md){
+                    margin-top: 20px;
+                    padding: 0 20px;
+                }
+                font-size: 38px;
+            }
+        }
+        &--3{
+            justify-content: flex-end;
+        }
+    }
+    &__h3{
+        position: relative;
+        margin-bottom: 25px;
+        &:before{
+            position: absolute;
+            bottom: -10px;
+            opacity: 1;
+            width: 50px;
+            height: 4px;
+            content: '';
+            background-color: var(--main-brand-color);
+        }
+    }
+}
+
+
+.footer{
+    background-color: var(--main-bg-footer);
+    border-top: 2px solid var(--main-brand-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    a,p{
+        font-size: 16px;
+        color: var(--main-color);
+    }
+    &__col{
+        &-logo{
+            margin-right: 20px;
+            img{
+                height: 94px;
+            }
+        }
+        &--first{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__container{
+        a{
+            &:hover{
+                text-decoration: none;
+                color: var(--main-brand-color);
+            }
+        }
+    }
+    &__nav{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include media-breakpoint-down(md){
+            margin-top: 30px;
+        }
+        a{
+            border-bottom: 2px solid var(--main-brand-color);
+            &:hover{
+                color: var(--main-brand-color);
+            }
+        }
+        &-item{
+            padding-left: 0px;
+        }
+    }
+}
+
+/*slider switch css */
+.theme-switch{
+    display: inline-block;
+    height: 24px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    z-index: 11;
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    input{
+        display:none;
+        &:checked + .theme-switch-slider {
+            background-color: #60656F;
+        }
+        &:checked + .theme-switch-slider:before {
+            transform: translateX(15px);
+        }
+    }
+  
+    &-slider {
+      background-color: #E4E4E7;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: .4s;
+      border-radius: 8px;
+      &:before {
+        background-color: #fff;
+        background: url(../assets/color.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        bottom: 3px;
+        content: "";
+        height: 18px;
+        left: 3px;
+        position: absolute;
+        transition: .4s;
+        width: 18px;
+        border-radius: 6px;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+      }
+    }
+}
