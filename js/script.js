@@ -9,13 +9,15 @@ $('body').scrollspy({ target: '.header__nav' })
 //liquid
 $(function() {
     var header = $(".liquid");
+    var lander = $(".lander");
     $(window).scroll(function() {
             var scroll = $(window).scrollTop();
     
-            if (scroll >= 200) {
+            if (scroll >= 100) {
                     header.removeClass('liquid').addClass("liquid-alt");
+                    lander.removeClass('lander').addClass("lander-alt");
             } else {
-                    header.removeClass("liquid-alt").addClass('liquid');
+                  //  header.removeClass("liquid-alt").addClass('liquid');
             }
     });
 });
