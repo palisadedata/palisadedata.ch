@@ -27,7 +27,7 @@
 <body data-spy="scroll" data-target="#header" data-offset="250" class="body">
     <?php readfile("header.html"); ?>
 
-    <section class="palisade">
+    <section class="palisade lander" id="palisade">
         <div class="palisade__container container">
             <div class="palisade__row palisade__row--logo row">
                 <div class="palisade__logo-container col-md-12 col-12">

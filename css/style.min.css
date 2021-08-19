@@ -416,6 +416,16 @@ p {
   z-index: 2;
 }
 
+.lander {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.lander-alt {
+  opacity: 0;
+  height: 20vh;
+  transition: height 1s ease-in, opacity 1s;
+}
+
 .info {
   margin-top: 60px;
 }
@@ -425,7 +435,7 @@ p {
   }
 }
 .info__step {
-  padding-bottom: 160px;
+  padding-top: 160px;
 }
 @media (max-width: 767px) {
   .info__step {
@@ -434,6 +444,7 @@ p {
 }
 .info__step--1 {
   text-align: center;
+  padding-top: 0;
 }
 .info__step--1-title {
   color: var(--main-brand-color);
@@ -449,6 +460,9 @@ p {
 }
 .info__step--3 {
   justify-content: flex-end;
+}
+.info__step--4 {
+  padding-bottom: 120px;
 }
 .info__h3 {
   position: relative;

@@ -497,18 +497,30 @@ p{
     }
 }
 
+.lander{
+    opacity: 1;
+    transition: opacity 1s,;
+    &-alt{
+        opacity: 0;
+        height: 20vh;
+        transition: height 1s ease-in, opacity 1s;
+    }
+}
+
+
 .info{
     margin-top: 60px;
     @include media-breakpoint-down(md){
         margin-top: 20px;
     }
     &__step{
-        padding-bottom: 160px;
+        padding-top: 160px;
         @include media-breakpoint-down(md){
             padding-bottom: 80px;
         }
         &--1{
             text-align: center;
+            padding-top: 0;
             &-title{
                 color: var(--main-brand-color);
                 margin: 0 auto;
@@ -522,6 +534,9 @@ p{
         }
         &--3{
             justify-content: flex-end;
+        }
+        &--4{
+            padding-bottom: 120px;
         }
     }
     &__h3{
